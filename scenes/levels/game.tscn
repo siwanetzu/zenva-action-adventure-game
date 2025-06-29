@@ -93,3 +93,4 @@ material = SubResource("StandardMaterial3D_riktp")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.35159, 0.513, 11.4769)
 
 [node name="Player" parent="Characters" instance=ExtResource("2_eqihu")]
+deceleration = 4.0

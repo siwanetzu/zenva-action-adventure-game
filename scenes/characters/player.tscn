@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddxbevjuifi1"]
+[gd_scene load_steps=5 format=3 uid="uid://ddxbevjuifi1"]
 
 [ext_resource type="PackedScene" uid="uid://dkpda6i84i0fx" path="res://scenes/characters/character.tscn" id="1_rp718"]
+[ext_resource type="Script" uid="uid://4phgx4xj5aoy" path="res://scenes/characters/player.gd" id="2_dyp2m"]
 [ext_resource type="PackedScene" uid="uid://bq1wxrdbnqpau" path="res://scenes/characters/player_skin.tscn" id="2_yewv4"]
 [ext_resource type="PackedScene" uid="uid://cmks2rqqa6ola" path="res://scenes/characters/camera_controller.tscn" id="3_76oj4"]
 
 [node name="Player" instance=ExtResource("1_rp718")]
 collision_layer = 2
 collision_mask = 5
+script = ExtResource("2_dyp2m")
+acceleration = 8.0
+deceleration = 4.0
 
 [node name="PlayerSkin" parent="." index="1" instance=ExtResource("2_yewv4")]
 
