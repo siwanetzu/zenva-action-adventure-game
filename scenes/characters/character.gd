@@ -12,5 +12,12 @@ var movement_input: Vector2
 @onready var jump_gravity: float = ((2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak))
 @onready var fall_gravity: float = ((2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent))
 
+@onready var move_state_machine = $AnimationTree.get("parameters/MoveStateMachine/playback") as AnimationNodeStateMachinePlayback
+
+
 func apply_gravity(gravity, delta):
 	velocity.y -= gravity * delta
+
+
+func set_move_state(state_name: String):
+	move_state_machine.travel(state_name)
